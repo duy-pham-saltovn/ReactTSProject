@@ -1,0 +1,102 @@
+version: "3.8"
+services:
+  # PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rn_back_end
+    restart: unless-stopped
+    tty: true
+    environment:
+      APP_NAME: ReactNative
+      APP_ENV: local
+      APP_KEY: base64:OcRyJ7zOMwZnKy2y5k5fWKFACT2hNJUNgUx4Z1D1thc=
+      APP_DEBUG: "true"
+      DEBUGBAR_ENABLED: "false"
+      APP_URL: https://localhost:8800
+      APP_URL_ADMIN: https://localhost:8800/system
+      CDN_URL: https://storage.googleapis.com/trendsvietnam/
+
+      LOG_CHANNEL: stack
+      DB_CONNECTION: mysql
+      DB_HOST: rn_mysql
+      DB_PORT: 3306
+      DB_DATABASE: rn_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+
+      BROADCAST_DRIVER: log
+      CACHE_DRIVER: file
+      QUEUE_CONNECTION: sync
+      SESSION_DRIVER: file
+      SESSION_LIFETIME: 120
+
+      REDIS_HOST: 127.0.0.1
+      REDIS_PASSWORD: null
+      REDIS_PORT: 6379
+      MAIL_DRIVER: mailgun
+      MAIL_HOST: smtp.mailgun.org
+      MAIL_PORT: 587
+
+      MAIL_USERNAME: null
+      MAIL_PASSWORD: null
+      MAIL_ENCRYPTION: null
+      MAIL_FROM_ADDRESS: admin@gmail.com
+      MAIL_FROM_NAME: null
+      MAILGUN_DOMAIN: null
+      MAILGUN_SECRET: null
+
+      FB_CLIENT_ID: 373727396867924
+      FB_CLIENT_SECRET: 072c0579489cedd9cc0944158b6f962d
+      FB_REDIRECT: https://trendsvietnam.vn/facebook/callback
+
+      GOOGLE_CLOUD_PROJECT_ID: trendsvn
+      GOOGLE_CLOUD_KEY_FILE: /var/www/html/genius/src/trendsvn-google-cloud.json
+      GOOGLE_CLOUD_STORAGE_BUCKET: trendsvietnam
+      GOOGLE_REDIRECT: https://localhost:3000/google/callback
+
+      GOOGLE_CLIENT_ID: 650068002981-iivventkbtgnqjfl1cso0vs2upvkkt9t.apps.googleusercontent.com
+      GOOGLE_CLIENT_SECRET: AK7cednkh4OQDSm_QNN9vRgE
+    working_dir: /var/www/rn
+    volumes:
+      - ./:/var/www/rn
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - rn-backend
+  nginx:
+    image: nginx:alpine
+    container_name: rn_nginx
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8800:443"
+    volumes:
+      - ./:/var/www/rn
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/certs:/etc/nginx/certs
+    networks:
+      - rn-backend
+  #MySQL Service
+  db:
+    image: 'mysql:8.0'
+    container_name: rn_mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    ports:
+      - '3890:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: '123123'
+      MYSQL_DATABASE: 'rn_db'
+      MYSQL_USER: 'rn_user'
+      MYSQL_PASSWORD: '123123'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./mysql/mysql.cnf:/etc/mysql/mysql.cnf
+    networks:
+      - rn-backend
+#Docker Networks
+networks:
+  rn-backend:
+    driver: bridge
