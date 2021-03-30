@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::resource('v1/users', \App\Http\Controllers\Api\UserController::class);
+Route::name('api.users.')->group(function () {
+    Route::get('v1/users', [UserController::class, 'index'])->name('index');
+    Route::post('v1/users', [UserController::class, 'store'])->name('store');
+    Route::get('v1/users/{id}', [UserController::class, 'show'])->name('show');
+    Route::put('v1/users/{id}', [UserController::class, 'update'])->name('update');
+    Route::delete('v1/users/{id}', [UserController::class, 'destroy'])->name('destroy');
+});
+

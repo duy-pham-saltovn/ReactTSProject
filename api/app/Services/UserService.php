@@ -30,4 +30,13 @@ class UserService
         $limit = $params['limit'] ?? 10;
         return $this->userRepo->findAll((int)$limit);
     }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
+    public function findOne($id)
+    {
+        return $this->userRepo->find($id);
+    }
 }
