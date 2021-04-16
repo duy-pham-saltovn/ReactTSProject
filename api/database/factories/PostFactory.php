@@ -24,6 +24,7 @@ class PostFactory extends Factory
         return [
             'title' => $this->faker->title,
             'desc' => $this->faker->address,
+            'image' => 'https://storage.googleapis.com/duy-demo/image-' . rand(1, 20) . '.png',
             'content' => $this->faker->text,
         ];
     }

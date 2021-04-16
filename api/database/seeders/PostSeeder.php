@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Faker\Generator as Faker;
 
 class PostSeeder extends Seeder
 {
@@ -15,8 +16,8 @@ class PostSeeder extends Seeder
     public function run()
     {
         User::factory()
-            ->count(50)
-            ->hasPosts(15)
+            ->count(100)
+            ->hasPosts(5)
             ->create();
     }
 }

@@ -10,13 +10,12 @@
 
 import React from 'react';
 import { StatusBar } from 'react-native';
-import BottomTab from './components/nav/BottomTab';
-
+import Navigator from './src/screens/Navigation';
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <BottomTab />
+      <Navigator />
     </>
   );
 };
