@@ -5,11 +5,10 @@ import { View, Text } from 'react-native'
 import { BaseColor } from '../../components/Color/Index'
 import FontAwesome from '../../components/Icon/FontAwesome'
 import SimpleLineIcon from '../../components/Icon/SimpleLineIcon'
+import Material from '../../components/Icon/Material'
 import Home from '../Home/index'
 import Detail from '../Detail/Index'
-import SignInScreen from '../Account/SignIn'
-import SignUpScreen from '../Account/SignUp'
-import About from '../About/Index';
+import About from '../About/Index'
 
 
 const MainStack = createStackNavigator();
@@ -92,7 +91,7 @@ function BottomTabNavigator() {
         component={About}
         options={{
           title: 'About Us',
-          tabBarIcon: ({ color }) => <FontAwesome name="user-circle" solid color={color} size={20} />,
+          tabBarIcon: ({ color }) => <Material name="information" solid color={color} size={20} />,
         }}
       />
     </BottomTab.Navigator>
