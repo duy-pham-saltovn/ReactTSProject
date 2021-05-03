@@ -28,7 +28,8 @@ class UserService
     public function findAll($params)
     {
         $limit = $params['limit'] ?? 10;
-        return $this->userRepo->findAll((int)$limit);
+        $offset = $params['offset'] ?? 0;
+        return $this->userRepo->findAll((int)$offset, (int)$limit);
     }
 
     /**

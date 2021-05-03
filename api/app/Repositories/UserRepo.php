@@ -17,11 +17,12 @@ class UserRepo extends EloquentRepo
     }
 
     /**
+     * @param $offset
      * @param $limit
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function findAll($limit)
+    public function findAll($offset, $limit)
     {
-        return $this->model->with(['posts'])->limit($limit)->get();
+        return $this->model->offset($offset)->limit($limit)->get();
     }
 }
