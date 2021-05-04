@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { View, Text } from 'react-native'
@@ -9,7 +9,10 @@ import Material from '../../components/Icon/Material'
 import Home from '../Home/index'
 import Detail from '../Detail/Index'
 import About from '../About/Index'
-
+import SignInScreen from '../Account/SignIn';
+import { AuthContext } from '../../reducers/Auth'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const MainStack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -32,24 +35,34 @@ export default function Main() {
 
 function Event() {
   return (
-    <View>
-      <Text>Event</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1, padding: 20 }}>
+      <View>
+        <Text style={{ fontSize: 30, color: BaseColor.orangeColor }}>Event</Text>
+      </View>
+    </SafeAreaView>
   )
 }
 
-function Account() {
+function Profile() {
+  const { loginState, dispatch } = useContext(AuthContext);
   return (
-    <View>
-      <Text>Account</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1, padding: 20 }}>
+      <View style={{ padding: 40 }}>
+        <Text style={{ fontSize: 20, color: BaseColor.orangeColor, marginBottom: 30 }}>Welcome: {loginState.username}</Text>
+        <TouchableOpacity onPress={() => dispatch({ type: 'LOGOUT' })}>
+          <Text style={{ fontSize: 20 }}>Logout</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   )
 }
 
 function BottomTabNavigator() {
+  const { loginState } = useContext(AuthContext);
+
   return (
     <BottomTab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Account"
       screenOptions={{ headerShown: false } as any}
       tabBarOptions={{
         showIcon: true,
@@ -80,7 +93,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="Account"
-        component={Account}
+        component={loginState.token ? Profile : SignInScreen}
         options={{
           title: 'Account',
           tabBarIcon: ({ color }) => <FontAwesome name="user-circle" solid color={color} size={20} />,

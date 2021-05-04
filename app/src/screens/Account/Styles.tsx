@@ -1,4 +1,5 @@
 import { Platform, StyleSheet } from "react-native";
+import { BaseColor } from '../../components/Color/Index'
 
 export default StyleSheet.create({
   container: {
@@ -8,8 +9,9 @@ export default StyleSheet.create({
     bottom: 0,
     left: 0,
     flex: 1,
+    // backgroundColor: '#fff',
     backgroundColor: '#009387',
-    opacity: 0.5
+    opacity: 0.5,
   },
   header: {
     flex: 1,

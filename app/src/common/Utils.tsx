@@ -1,4 +1,5 @@
 import CONFIG from '../configs/config'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 /**
  * Convert object to query string: page=1&limit=20
@@ -79,4 +80,40 @@ export function isEmptyObject(value: any) {
  */
 export function makeImageURL(url: string) {
   return `${CONFIG.IMAGE_URL}/${url}`;
+}
+
+/**
+ * console.log high light
+ * @param name 
+ * @param val 
+ * @param color 
+ * @param fontSize 
+ */
+export function logHightLevel(name: string, val?: string | null, color: string = 'red', fontSize: string = '15') {
+  console.log(`%c ${name}`, `color: ${color}; font-size: ${fontSize}px`, val)
+}
+
+export async function setAsyncStorage(key: string, val: any) {
+  try {
+    await AsyncStorage.setItem(key, val)
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+export async function removeAsyncStorage(key: string) {
+  try {
+    await AsyncStorage.removeItem(key)
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+export async function getAsyncStorage(key: string) {
+  try {
+    const jsonValue = await AsyncStorage.getItem(key)
+    return jsonValue != null ? JSON.parse(jsonValue) : null;
+  } catch (e) {
+    // error reading value
+  }
 }
