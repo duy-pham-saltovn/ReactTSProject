@@ -8,8 +8,9 @@ export default StyleSheet.create({
     bottom: 0,
     left: 0,
     flex: 1,
+    // backgroundColor: '#fff',
     backgroundColor: '#009387',
-    opacity: 0.5
+    opacity: 0.5,
   },
   header: {
     flex: 1,

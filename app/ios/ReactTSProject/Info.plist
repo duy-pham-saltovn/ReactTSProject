@@ -44,7 +44,11 @@
 		<string>SimpleLineIcons.ttf</string>
 		<string>AntDesign.ttf</string>
 		<string>FontAwesome.ttf</string>
+		<string>MaterialIcons.ttf</string>
 		<string>MaterialCommunityIcons.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Italic.ttf</string>
+		<string>Roboto-Medium.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchMainScreen</string>

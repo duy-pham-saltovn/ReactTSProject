@@ -8,13 +8,11 @@
  * @format
  */
 
-import React from 'react';
-import { StatusBar } from 'react-native';
-import Navigator from './src/screens/Navigation';
+import React from 'react'
+import Navigator from './src/screens/Navigation/Index'
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
       <Navigator />
     </>
   );

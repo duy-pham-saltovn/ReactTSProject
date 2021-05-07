@@ -17,9 +17,12 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactTSProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactTSProjectTests.m */; };
+		4F0716510EA84D98B079B285 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96D373F7DD4F4EE980E10CD6 /* Roboto-Italic.ttf */; };
 		C023700C49FC1101907ACDA6 /* libPods-ReactTSProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9D498EA135C72AEBF59B36 /* libPods-ReactTSProject-tvOS.a */; };
+		D1B3C2CA4415455FB54FDB4B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 835DDCD4171B4899A824EFE3 /* Roboto-Medium.ttf */; };
 		D46CCBB1C7FFFA0AD9960793 /* libPods-ReactTSProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79506AA5497A86C936DCB2B0 /* libPods-ReactTSProject-tvOSTests.a */; };
 		EB45F3CB633A3F4F4010D10B /* libPods-ReactTSProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 473E59D2201CA2B7F78F037B /* libPods-ReactTSProject.a */; };
+		ED7DC9C23F33484EA56E2501 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6976CD6EC799471C93F8951E /* Roboto-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +56,12 @@
 		181CDC302637B68900BBAB22 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		181CDC312637B69600BBAB22 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		183944A7263B10DB008E0A2A /* LaunchMainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchMainScreen.storyboard; sourceTree = "<group>"; };
+		1870E7FE2645A29800E3D1E8 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		18EE9F7B264559600055B1C0 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		18FC1C5926294A1F00609100 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		18FC1C5A26294A1F00609100 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		18FC1C5B26294A1F00609100 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		18FC1C5C26294A1F00609100 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		18FC1C9526296AF800609100 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		22E578FD52CD6A5BC5CDE776 /* Pods-ReactTSProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactTSProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactTSProject-tvOSTests/Pods-ReactTSProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		27B8D9C9FE12BEE4986BABF6 /* Pods-ReactTSProject-ReactTSProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactTSProject-ReactTSProjectTests.release.xcconfig"; path = "Target Support Files/Pods-ReactTSProject-ReactTSProjectTests/Pods-ReactTSProject-ReactTSProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ReactTSProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactTSProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,9 +70,12 @@
 		473E59D2201CA2B7F78F037B /* libPods-ReactTSProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactTSProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598E58FC55588337995AD570 /* Pods-ReactTSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactTSProject.release.xcconfig"; path = "Target Support Files/Pods-ReactTSProject/Pods-ReactTSProject.release.xcconfig"; sourceTree = "<group>"; };
 		5A4C315E5A82F0DF6FA8CD13 /* Pods-ReactTSProject-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactTSProject-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ReactTSProject-tvOS/Pods-ReactTSProject-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		6976CD6EC799471C93F8951E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		6CB998CD54D88EBBB9E8E3B4 /* Pods-ReactTSProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactTSProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ReactTSProject-tvOSTests/Pods-ReactTSProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		79506AA5497A86C936DCB2B0 /* libPods-ReactTSProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactTSProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		835DDCD4171B4899A824EFE3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		8D2BB1F3440CF7CCD8A624A4 /* libPods-ReactTSProject-ReactTSProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactTSProject-ReactTSProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96D373F7DD4F4EE980E10CD6 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../src/assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		C1960AD3766BF140DE24A741 /* Pods-ReactTSProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactTSProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactTSProject-tvOS/Pods-ReactTSProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CD9D498EA135C72AEBF59B36 /* libPods-ReactTSProject-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactTSProject-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48F8B72AB4B52C796688274 /* Pods-ReactTSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactTSProject.debug.xcconfig"; path = "Target Support Files/Pods-ReactTSProject/Pods-ReactTSProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,15 +154,26 @@
 		18FC1C58262949B100609100 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				1870E7FE2645A29800E3D1E8 /* MaterialCommunityIcons.ttf */,
+				18EE9F7B264559600055B1C0 /* MaterialIcons.ttf */,
 				181CDC312637B69600BBAB22 /* AntDesign.ttf */,
 				181CDC302637B68900BBAB22 /* SimpleLineIcons.ttf */,
-				18FC1C9526296AF800609100 /* MaterialCommunityIcons.ttf */,
 				18FC1C5926294A1F00609100 /* FontAwesome.ttf */,
 				18FC1C5B26294A1F00609100 /* FontAwesome5_Brands.ttf */,
 				18FC1C5A26294A1F00609100 /* FontAwesome5_Regular.ttf */,
 				18FC1C5C26294A1F00609100 /* FontAwesome5_Solid.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		2C7AACD3B385494ABCE38452 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6976CD6EC799471C93F8951E /* Roboto-Bold.ttf */,
+				96D373F7DD4F4EE980E10CD6 /* Roboto-Italic.ttf */,
+				835DDCD4171B4899A824EFE3 /* Roboto-Medium.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -187,6 +205,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8632A00F1DB2C7A6A3B19F9A /* Pods */,
+				2C7AACD3B385494ABCE38452 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -365,6 +384,9 @@
 			files = (
 				183944A8263B10DB008E0A2A /* LaunchMainScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				ED7DC9C23F33484EA56E2501 /* Roboto-Bold.ttf in Resources */,
+				4F0716510EA84D98B079B285 /* Roboto-Italic.ttf in Resources */,
+				D1B3C2CA4415455FB54FDB4B /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,7 +807,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReactTSProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -808,7 +830,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = ReactTSProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -979,7 +1001,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
@@ -1032,7 +1054,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",

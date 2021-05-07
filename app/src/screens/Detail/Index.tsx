@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Animated, SafeAreaView, ScrollView, Text, useWindowDimensions, View } from "react-native"
 import HTML from "react-native-render-html"
-import { BaseColor } from "../../components/Color/Index"
+import { BaseColor } from "../../configs/Theme"
 import { IPost, IDetail } from '../../Interfaces/Post'
 import Image from '../../components/Image/Index'
 import SimpleLineIcon from '../../components/Icon/SimpleLineIcon'
@@ -17,7 +17,6 @@ export default function Detail({ navigation, route }: { navigation: any, route: 
   const deltaY = new Animated.Value(0);
   const [heightHeader, setHeightHeader] = useState(Utils.heightHeader());
   const heightImageBanner = Utils.scaleWithPixel(300, 1);
-  const [htmlContent, setHtmlContent] = useState('')
   const contentWidth = useWindowDimensions().width;
   const [data, setData] = useState<IDetail | null>(null)
 
@@ -71,11 +70,9 @@ export default function Detail({ navigation, route }: { navigation: any, route: 
           <Image source={{ uri: data?.is_new_avatar === 1 ? data?.profile_url : `${CONFIG.IMAGE_URL}/${data?.profile_url}` }} style={styles.userIcon} />
           <View style={{ justifyContent: "space-around" }}>
             <Text style={styles.textAbsolute}>
-              {createdAt && format(createdAt, 'Y-m-d')}
+              {createdAt && format(createdAt, 'Y-MM-dd')}
             </Text>
-            <Text style={styles.textAbsolute}>
-              {data?.full_name}
-            </Text>
+            <Text style={styles.textAbsolute}>Salto Vietnam</Text>
           </View>
         </Animated.View>
       </Animated.View>
@@ -91,7 +88,7 @@ export default function Detail({ navigation, route }: { navigation: any, route: 
         styleLeft={{ paddingHorizontal: 10 }}
         styleCenter={{ color: BaseColor.whiteColor }}
         renderLeft={() => <SimpleLineIcon name="arrow-left-circle" color={BaseColor.whiteColor} size={30} />}
-        renderRight={() => <SimpleLineIcon name="arrow-left-circle" size={20} color={BaseColor.whiteColor} />}
+        renderRight={() => <SimpleLineIcon name="share" size={20} color={BaseColor.whiteColor} />}
         onPressLeft={() => navigation.goBack()}
         onPressRight={() => navigation.navigate('PreviewImage', { gallery: '111' })}
       />

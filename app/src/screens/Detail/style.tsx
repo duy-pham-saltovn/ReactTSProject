@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { BaseColor } from '../../components/Color/Index'
+import { BaseColor } from '../../configs/Theme'
 
 export default StyleSheet.create({
   imgBanner: {

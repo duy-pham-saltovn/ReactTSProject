@@ -31,19 +31,17 @@ export default StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 5,
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: BaseColor.grayColor,
     flexWrap: 'wrap'
   },
   label: {
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: '500',
     paddingBottom: 5,
-    paddingRight: 5
+    paddingHorizontal: 5
   },
   txt: {
     fontSize: 16,
-
+    lineHeight: 17
   },
   map: {
     ...StyleSheet.absoluteFillObject,

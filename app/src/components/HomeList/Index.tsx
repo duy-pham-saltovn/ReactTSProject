@@ -21,7 +21,7 @@ export default function HomeList(props: { style?: ViewStyle | TextStyle | ImageS
       <View style={styles.listContentRight}>
         <Text style={styles.title} numberOfLines={2}>{item.post_title}</Text>
         <Text numberOfLines={3} style={{ marginTop: 5 }}>{item.short_desc}</Text>
-        <Text style={{ marginTop: 10 }}>{format(createdAt, formatDate ?? 'Y-m-d')}</Text>
+        <Text style={{ marginTop: 10 }}>{format(createdAt, formatDate ?? 'Y-MM-dd')}</Text>
       </View>
     </TouchableOpacity>
   )

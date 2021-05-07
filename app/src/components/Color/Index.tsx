@@ -4,7 +4,9 @@ export const COLORS = {
   activeColor: '#E5634D',
   inActiveColor: '#9B9B9B'
 }
-
+/**
+ * Define Const color use for whole application
+ */
 export const BaseColor = {
   grayColor: '#9B9B9B',
   dividerColor: '#BDBDBD',
@@ -19,6 +21,6 @@ export const BaseColor = {
   greenColor: '#58D68D',
   whileOpacity: 'rgba(254, 251, 251, 0.9)',
   redColor: 'red'
-};
+}
 
 export const mainstyles = StyleSheet.create({});
