@@ -6,8 +6,7 @@ import LinearGradient from 'react-native-linear-gradient'
 import FontAwesome from '../../components/Icon/FontAwesome'
 import Material from '../../components/Icon/Material'
 import styles from './Styles'
-import { AuthContext } from '../../reducers/Auth';
-
+import { AuthContext } from '../../reducers/Auth'
 
 export default function SignIn({ navigation }: { navigation: StackNavigationProp<any> }) {
   const { colors } = useTheme();
@@ -16,7 +15,7 @@ export default function SignIn({ navigation }: { navigation: StackNavigationProp
     username: '',
     password: '',
     check_textInputChange: false,
-    secureTextEntry: false,
+    secureTextEntry: true,
     isValidUser: true,
     isValidPassword: true,
   });
@@ -80,7 +79,7 @@ export default function SignIn({ navigation }: { navigation: StackNavigationProp
             style={[styles.textInput, { color: colors.text }]}
           />
           <TouchableOpacity onPress={updateSecureTextEntry}>
-            <Material name={`${data.secureTextEntry ? 'eye-off-outline' : 'eye'}`} color="grey" size={20} />
+            <FontAwesome name={`${data.secureTextEntry ? 'eye-slash' : 'eye'}`} color="grey" size={20} />
           </TouchableOpacity>
         </View>
         <View style={styles.button}>

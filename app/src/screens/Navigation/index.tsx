@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer } from "react"
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import SplashScreen from 'react-native-splash-screen'
-import Main from './main'
+import Main from './Main'
 import { userState, useLoginReducer, AuthContext } from '../../reducers/Auth'
 import { logHightLevel, getAsyncStorage } from '../../common/Utils'
 
@@ -30,7 +30,7 @@ export default function Navigator() {
 
   return (
     <AuthContext.Provider value={{ loginState, dispatch }}>
-      <NavigationContainer>
+      <NavigationContainer theme={DefaultTheme}>
         <RootStack.Navigator mode="modal" screenOptions={{ headerShown: false }} initialRouteName="Loading">
           <RootStack.Screen name="Main" component={Main} />
         </RootStack.Navigator>
