@@ -7,15 +7,16 @@ import SimpleLineIcon from '../../components/Icon/SimpleLineIcon'
 import FontAwesome from '../../components/Icon/FontAwesome'
 import Material from '../../components/Icon/Material'
 import LinearGradient from 'react-native-linear-gradient'
+import { StackNavigationProp } from '@react-navigation/stack'
 
-export default function Index() {
+export default function Index({ navigation }: { navigation: StackNavigationProp<any> }) {
   const { dispatch } = useContext(AuthContext);
   const { colors } = useTheme()
   return (
     <View style={{ flex: 1, padding: 15, backgroundColor: '#fff' }}>
       <View style={styles.cardLine}>
         <View style={styles.container}>
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('AccountInfo')}>
             <View style={styles.cardIcon}>
               <FontAwesome name="user-secret" color='#fff' solid size={25} />
             </View>

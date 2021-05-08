@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ActivityIndicator, FlatList, SafeAreaView, Text, View, } from 'react-native'
 import { IPost } from '../../Interfaces/Post'
-import styles from './style'
+import styles from './Style'
 import CONFIG from '../../configs/config'
 import {
   Placeholder,

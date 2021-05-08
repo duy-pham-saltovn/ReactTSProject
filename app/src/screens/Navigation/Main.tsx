@@ -27,10 +27,20 @@ export default function Main() {
         }}
         initialRouteName="BottomTabNavigator">
         <MainStack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
-        <MainStack.Screen name="DetailItem" component={Detail}
-        />
+        <MainStack.Screen name="DetailItem" component={Detail} />
+        <MainStack.Screen name="AccountInfo" component={AccountInfo} />
       </MainStack.Navigator>
     </>
+  )
+}
+
+function AccountInfo() {
+  return (
+    <SafeAreaView style={{ flex: 1, padding: 20 }}>
+      <View>
+        <Text>Account Info</Text>
+      </View>
+    </SafeAreaView>
   )
 }
 
@@ -51,7 +61,7 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="PersonalScreen"
+      initialRouteName="Home"
       screenOptions={{ headerShown: false } as any}
       tabBarOptions={{
         showIcon: true,
@@ -66,7 +76,7 @@ function BottomTabNavigator() {
         },
       } as any}>
       <BottomTab.Screen
-        name="HomeScreen"
+        name="Home"
         component={HomeStackScreen}
         options={{
           title: 'Home',
