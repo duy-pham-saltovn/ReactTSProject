@@ -6,7 +6,7 @@ import { IPost, IDetail } from '../../Interfaces/Post'
 import Image from '../../components/Image/Index'
 import SimpleLineIcon from '../../components/Icon/SimpleLineIcon'
 import * as Utils from '../../utils/Index'
-import styles from './style'
+import styles from './Style'
 import Header from "../../components/Header/Index"
 import { findOne } from "../../api/HandleRequest"
 import CONFIG from "../../configs/config"
