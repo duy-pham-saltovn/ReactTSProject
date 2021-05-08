@@ -1,4 +1,4 @@
-import { Platform, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { BaseColor } from '../../configs/Theme'
 
 export default StyleSheet.create({
@@ -13,6 +13,14 @@ export default StyleSheet.create({
     marginHorizontal: 0,
     alignSelf: 'center',
   },
+  cardLine: {
+    paddingBottom: 20,
+  },
+  cardLabel: {
+    textAlign: "center",
+    color: BaseColor.grayColor,
+    fontSize: 25,
+  },
   cardIcon: {
     borderWidth: 0,
     alignItems: 'center',
@@ -26,6 +34,6 @@ export default StyleSheet.create({
   cardTxt: {
     alignSelf: 'center',
     marginTop: 5,
-    color: '#de4f35',
+    color: BaseColor.grayColor,
   }
 })
