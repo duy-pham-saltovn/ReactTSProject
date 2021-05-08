@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createStackNavigator, StackNavigationProp } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { View, Text, TouchableOpacity } from 'react-native'
@@ -51,7 +51,7 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Profile"
+      initialRouteName="PersonalScreen"
       screenOptions={{ headerShown: false } as any}
       tabBarOptions={{
         showIcon: true,
@@ -66,8 +66,8 @@ function BottomTabNavigator() {
         },
       } as any}>
       <BottomTab.Screen
-        name="Home"
-        component={Home}
+        name="HomeScreen"
+        component={HomeStackScreen}
         options={{
           title: 'Home',
           tabBarIcon: ({ color }) => <FontAwesome name="home" color={color} size={20} />,
@@ -82,7 +82,7 @@ function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="Personal"
+        name="PersonalScreen"
         component={loginState.token ? PersionalScreen : SignInScreen}
         options={{
           title: 'Personal',
@@ -102,9 +102,38 @@ function BottomTabNavigator() {
   )
 }
 
-function AboutScreen() {
+function HomeStackScreen({ navigation }: { navigation: StackNavigationProp<any> }) {
   const { colors } = useTheme()
-  const { loginState } = useContext(AuthContext)
+
+  return (
+    <MainStack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: colors.background,
+          shadowColor: colors.background,
+          elevation: 0,
+        },
+        headerTintColor: colors.text,
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          color: colors.textWhite
+        },
+      }}
+    >
+      <MainStack.Screen
+        name="HomeScreen"
+        component={Home}
+        options={{
+          title: 'Welcome Salto Vietnam',
+          headerRight: () => headerRight({ navigation })
+        }}
+      />
+    </MainStack.Navigator >
+  )
+}
+
+function AboutScreen({ navigation }: { navigation: StackNavigationProp<any> }) {
+  const { colors } = useTheme()
   return (
     <MainStack.Navigator
       screenOptions={{
@@ -121,25 +150,18 @@ function AboutScreen() {
       }}
     >
       <MainStack.Screen
-        name="About"
+        name="AboutScreen"
         component={About}
         options={{
           title: 'Welcome Salto Vietnam',
-          headerRight: () => loginState &&
-            <TouchableOpacity style={{ paddingRight: 10 }}>
-              <Image style={{
-                width: 36,
-                height: 36,
-                borderRadius: 18
-              }} source={avatar} />
-            </TouchableOpacity>
+          headerRight: () => headerRight({ navigation })
         }}
       />
     </MainStack.Navigator >
   )
 }
 
-function PersionalScreen() {
+function PersionalScreen({ navigation }: { navigation: StackNavigationProp<any> }) {
   const { colors } = useTheme();
   return (
     <MainStack.Navigator
@@ -157,21 +179,27 @@ function PersionalScreen() {
       }}
     >
       <MainStack.Screen
-        name="Persional"
+        name="PersonalScreen"
         component={PersonalDashboard}
         options={{
           title: 'Welcome Salto Vietnam',
-          headerRight: () => (
-            <TouchableOpacity style={{ paddingRight: 10 }}>
-              <Image style={{
-                width: 36,
-                height: 36,
-                borderRadius: 18
-              }} source={avatar} />
-            </TouchableOpacity>
-          )
+          headerRight: () => headerRight({ navigation })
         }}
       />
     </MainStack.Navigator >
+  )
+}
+
+function headerRight({ navigation }: { navigation: StackNavigationProp<any> }) {
+  const { loginState } = useContext(AuthContext)
+  return (
+    loginState &&
+    <TouchableOpacity style={{ paddingRight: 10 }} onPress={() => navigation.navigate('PersonalScreen')}>
+      <Image style={{
+        width: 36,
+        height: 36,
+        borderRadius: 18
+      }} source={avatar} />
+    </TouchableOpacity>
   )
 }

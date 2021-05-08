@@ -74,4 +74,4 @@ export default StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold'
   }
-});
+})

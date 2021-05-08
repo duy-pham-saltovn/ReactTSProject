@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { View, Text, StatusBar, TextInput, TouchableOpacity, Alert } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import LinearGradient from 'react-native-linear-gradient'
 import FontAwesome from '../../components/Icon/FontAwesome'
-import Material from '../../components/Icon/Material'
 import styles from './Styles'
 import { AuthContext } from '../../reducers/Auth'
 
