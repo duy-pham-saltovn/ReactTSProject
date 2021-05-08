@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ActivityIndicator, FlatList, SafeAreaView, Text, View, } from 'react-native'
 import { IPost } from '../../Interfaces/Post'
 import styles from './style'
@@ -12,13 +12,8 @@ import {
 
 import { fetchData } from '../../api/HandleRequest'
 import HomeList from '../../components/HomeList/Index'
-import { TouchableOpacity } from 'react-native-gesture-handler'
-import Image from '../../components/Image/Index'
-import { AuthContext } from '../../reducers/Auth'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { BaseColor } from '../../configs/Theme'
-
-const avatar = require('../../assets/avatar.jpg')
 
 export default function Home({ navigation }: { navigation: StackNavigationProp<any> }) {
   const [data, setData] = useState<IPost[]>([])
@@ -26,7 +21,6 @@ export default function Home({ navigation }: { navigation: StackNavigationProp<a
   const [refreshing, setRefreshing] = useState(false)
   const [endReached, setEndReached] = useState(false)
   const [offset, setOffset] = useState(1)
-  const { loginState } = useContext(AuthContext)
 
   /**
    * Fetch data when load page
@@ -121,17 +115,6 @@ export default function Home({ navigation }: { navigation: StackNavigationProp<a
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
       <View style={{ flex: 1 }}>
-        <View style={styles.contentHeader}>
-          <TouchableOpacity onPress={() => navigation.navigate('AboutUs')}>
-            <Text style={styles.headerText}>Salto Vietnam</Text>
-          </TouchableOpacity>
-          {
-            loginState.token && <TouchableOpacity>
-              <Image style={styles.avatar} source={avatar} />
-            </TouchableOpacity>
-          }
-
-        </View>
         {loading ? renderLoading(6) :
           <FlatList
             contentContainerStyle={{ backgroundColor: '#eee' }}
